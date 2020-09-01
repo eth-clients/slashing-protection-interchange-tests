@@ -1,0 +1,21 @@
+{
+    "metadata": {
+        "interchange_format": "minimal",
+        "interchange_format_version": "3",
+        "genesis_validators_root": "0x04700007fabc8282644aed6d1c7c9e21d38a03a0c4ba193f3afe428824b3a673"
+    },
+    "data": [
+        {
+            "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
+            "last_signed_block_slot": "89765",
+            "last_signed_attestation_source_epoch": "2990",
+            "last_signed_attestation_target_epoch": "3007"
+        },
+        {
+            "pubkey": "0xb89bebc699769726a318c8e9971bd3171297c61aea4a6578a7a4f94b547dcba5bac16a89108b6b6a1fe3695d1a874a0b",
+            "last_signed_block_slot": "89760",
+            "last_signed_attestation_source_epoch": "2991",
+            "last_signed_attestation_target_epoch": "3005"
+        }
+    ]
+}
