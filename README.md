@@ -96,3 +96,13 @@ may be treated as successes.
 Note that the top-level `genesis_validators_root` is not necessarily the same
 as the GVR contained in the interchange, to allow us to test the case where
 they are mismatched.
+
+## Downloading the tests
+
+For the time being you can hit this URL to get a .tar.gz of this repo:
+
+```
+https://github.com/eth2-clients/slashing-protection-interchange-tests/tarball/<COMMIT_HASH>
+```
+
+Or you can use a git submodule.
