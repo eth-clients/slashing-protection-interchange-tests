@@ -15,8 +15,7 @@ For example:
   "genesis_validators_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "interchange": {
     "metadata": {
-      "interchange_format": "complete",
-      "interchange_format_version": "4",
+      "interchange_format_version": "5",
       "genesis_validators_root": "0x0000000000000000000000000000000000000000000000000000000000000000"
     },
     "data": [
