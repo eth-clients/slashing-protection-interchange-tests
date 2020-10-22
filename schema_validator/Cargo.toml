@@ -1,0 +1,9 @@
+[package]
+name = "schema_validator"
+version = "0.1.0"
+authors = ["Michael Sproul <michael@sigmaprime.io>"]
+edition = "2018"
+
+[dependencies]
+jsonschema = "0.3.1"
+serde_json = "1.0.59"
