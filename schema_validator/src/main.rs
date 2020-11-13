@@ -12,7 +12,7 @@ fn main() {
 
     let tests_dir = &args[2];
 
-    let mut success = true;
+    let mut success_all = true;
 
     fs::read_dir(tests_dir)
         .expect("read_dir succeeds on test directory")
@@ -21,20 +21,24 @@ fn main() {
         .for_each(|path| {
             let test_file = File::open(&path).unwrap();
             let test_value: Value = serde_json::from_reader(test_file).unwrap();
-
-            let interchange_value = test_value.get("interchange").unwrap();
-
             let filename = path.file_name().unwrap().to_str().unwrap();
 
-            match schema.validate(interchange_value) {
-                Ok(()) => println!("{}, ok", filename),
-                Err(errors) => {
+            let steps = test_value.get("steps").unwrap();
+            let mut success = true;
+
+            for (i, step) in steps.as_array().unwrap().iter().enumerate() {
+                let interchange_value = step.get("interchange").unwrap();
+                if let Err(errors) = schema.validate(interchange_value) {
                     for e in errors {
-                        println!("{}, error: {:?}", filename, e);
+                        println!("{} .steps[{}].interchange, error: {:?}", filename, i, e);
                     }
                     success = false;
+                    success_all = false;
                 }
-            };
+            }
+            if success {
+                println!("{}, ok", filename);
+            }
         });
-    assert!(success, "one or more tests failed, see above");
+    assert!(success_all, "one or more tests failed, see above");
 }
