@@ -117,10 +117,6 @@ they are mismatched.
 
 ## Downloading the tests
 
-For the time being you can hit this URL to get a .tar.gz of this repo:
+The `tests` directory is released as a versioned `.tar.gz` on the [Releases](https://github.com/eth2-clients/slashing-protection-interchange-tests/releases) page.
 
-```
-https://github.com/eth2-clients/slashing-protection-interchange-tests/tarball/<COMMIT_HASH>
-```
-
-Or you can use a git submodule.
+Alternatively, you could use a git submodule.
