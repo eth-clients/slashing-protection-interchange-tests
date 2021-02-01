@@ -83,7 +83,7 @@ Each block in `blocks` is structured as:
 ```json
 {
   "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
-  "slot": 1,
+  "slot": "1",
   "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "should_succeed": false
 }
@@ -100,8 +100,8 @@ Each attestation in `attestations` is structured as:
 ```json
 {
   "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
-  "source_epoch": 11,
-  "target_epoch": 12,
+  "source_epoch": "11",
+  "target_epoch": "12",
   "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "should_succeed": true
 }
