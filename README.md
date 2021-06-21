@@ -21,7 +21,7 @@ For example:
   "steps": [
     {
       "should_succeed": true,
-      "allow_partial_import": false,
+      "contains_slashable_data": false,
       "interchange": {
         "metadata": {
           "interchange_format_version": "5",
@@ -68,9 +68,8 @@ which are as follows:
   against.
 * `steps[i].should_succeed: bool`: whether the `steps[i].interchange` given is valid and should
   be imported successfully.
-* `steps[i].allow_partial_import: bool`: whether the `steps[i].interchange` contains some
-  slashable data with respect to itself or the existing contents of the database, and therefore
-  a partial import is justified.
+* `steps[i].contains_slashable_data: bool`: whether the `steps[i].interchange` contains some
+  slashable data with respect to itself or the existing contents of the database.
 * `steps[i].interchange: Interchange`: slashing protection interchange data as described
   by the spec.
 * `steps[i].blocks: [object]`: a list of block signings to be attempted **after**
@@ -114,6 +113,21 @@ may be treated as successes.
 Note that the top-level `genesis_validators_root` is not necessarily the same
 as the GVR contained in the interchange, to allow us to test the case where
 they are mismatched.
+
+## Handling Slashable Data
+
+The `contains_slashable_data` parameter is to be interpreted as follows:
+
+- If `should_succeed` is false, then `contains_slashable_data` is irrelevant
+- If `contains_slashable_data` is false, then the given interchange **must** be imported
+  successfully, and the given block/attestation checks must pass.
+- If `contains_slashable_data` is true, then implementations have the option to do one of two
+  things:
+  	- Import the interchange successfully, working around the slashable data by minification
+	  or some other mechanism. If the import succeeds, all checks must pass and the test
+	  should continue to the next step.
+	- Reject the interchange (or partially import it), in which case the block/attestation
+	  checks and all future steps should be ignored.
 
 ## Downloading the tests
 
