@@ -1,5 +1,5 @@
 {
-  "name": "multiple_interchanges_single_validator_single_message_out_of_order",
+  "name": "multiple_interchanges_single_validator_single_block_out_of_order",
   "genesis_validators_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "steps": [
     {
