@@ -131,6 +131,6 @@ The `contains_slashable_data` parameter is to be interpreted as follows:
 
 ## Downloading the tests
 
-The `tests` directory is released as a versioned `.tar.gz` on the [Releases](https://github.com/eth2-clients/slashing-protection-interchange-tests/releases) page.
+The `tests` directory is released as a versioned `.tar.gz` on the [Releases](https://github.com/eth-clients/slashing-protection-interchange-tests/releases) page.
 
 Alternatively, you could use a git submodule.
