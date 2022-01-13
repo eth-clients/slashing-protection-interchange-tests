@@ -92,7 +92,8 @@ Your test-runner should attempt to sign a block with `signing_root` at the
 given slot from the given `pubkey`. The `should_succeed` field describes
 whether this signing should be accepted (true) or rejected (false). Clients
 using a slashing protection mechanism that admits false positives may consider
-a rejection as success even if `should_succeed` is true.
+a rejection as success even if `should_succeed` is true. If the block is signed
+successfully it should be incorporated into the slashing protection database.
 
 Each attestation in `attestations` is structured as:
 
@@ -108,7 +109,7 @@ Each attestation in `attestations` is structured as:
 
 Similarly to above, your test-runner should attempt to sign an attestation with these parameters
 using the given `pubkey`, and succeed based on the value of `should_succeed`. Again, false positives
-may be treated as successes.
+may be treated as successes, and signed attestations should be incorporated into the database.
 
 Note that the top-level `genesis_validators_root` is not necessarily the same
 as the GVR contained in the interchange, to allow us to test the case where
