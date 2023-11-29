@@ -60,31 +60,36 @@
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "41",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "45",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "49",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "50",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": false
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "51",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": true
+          "should_succeed": true,
+          "should_succeed_complete": true
         }
       ],
       "attestations": [
@@ -93,21 +98,24 @@
           "source_epoch": "3",
           "target_epoch": "31",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "source_epoch": "9",
           "target_epoch": "49",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "source_epoch": "10",
           "target_epoch": "51",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": true
+          "should_succeed": true,
+          "should_succeed_complete": true
         }
       ]
     }

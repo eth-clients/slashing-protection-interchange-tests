@@ -192,21 +192,24 @@
           "source_epoch": "0",
           "target_epoch": "4",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": false
         },
         {
           "pubkey": "0xb89bebc699769726a318c8e9971bd3171297c61aea4a6578a7a4f94b547dcba5bac16a89108b6b6a1fe3695d1a874a0b",
           "source_epoch": "1",
           "target_epoch": "2",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": false
         },
         {
           "pubkey": "0xa3a32b0f8b4ddb83f1a0a853d81dd725dfe577d4f4c3db8ece52ce2b026eca84815c1a7e8e92a4de3d755733bf7e4a9b",
           "source_epoch": "1",
           "target_epoch": "2",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": false
         }
       ]
     }
