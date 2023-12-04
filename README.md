@@ -84,16 +84,16 @@ Each block in `blocks` is structured as:
   "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
   "slot": "1",
   "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "should_succeed": false
+  "should_succeed": false,
+  "should_succeed_complete": true
 }
 ```
 
-Your test-runner should attempt to sign a block with `signing_root` at the
-given slot from the given `pubkey`. The `should_succeed` field describes
-whether this signing should be accepted (true) or rejected (false). Clients
-using a slashing protection mechanism that admits false positives may consider
-a rejection as success even if `should_succeed` is true. If the block is signed
-successfully it should be incorporated into the slashing protection database.
+Your test-runner should attempt to sign a block with `signing_root` at the given slot from the given
+`pubkey`. The `should_succeed` field describes whether this signing should be accepted (true) or
+rejected (false) _by a client using a minimal strategy_. Clients using a complete strategy should
+instead use the `should_succeed_complete` field which allows signing to succeed in more cases. If
+the block is signed successfully it should be incorporated into the slashing protection database.
 
 Each attestation in `attestations` is structured as:
 
@@ -103,13 +103,16 @@ Each attestation in `attestations` is structured as:
   "source_epoch": "11",
   "target_epoch": "12",
   "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "should_succeed": true
+  "should_succeed": true,
+  "should_succeed_complete": true
 }
 ```
 
 Similarly to above, your test-runner should attempt to sign an attestation with these parameters
-using the given `pubkey`, and succeed based on the value of `should_succeed`. Again, false positives
-may be treated as successes, and signed attestations should be incorporated into the database.
+using the given `pubkey`, and succeed based on the value of
+`should_succeed`/`should_succeed_complete`.  Again, implementations that use the _complete_ strategy
+should use `should_succeed_complete`. All implementations should incorporate signed attestations
+into the database.
 
 Note that the top-level `genesis_validators_root` is not necessarily the same
 as the GVR contained in the interchange, to allow us to test the case where

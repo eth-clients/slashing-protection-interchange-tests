@@ -30,7 +30,8 @@
           "source_epoch": "3",
           "target_epoch": "4",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": false
         }
       ]
     }

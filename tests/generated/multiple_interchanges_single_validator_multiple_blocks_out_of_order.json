@@ -27,19 +27,22 @@
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "10",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": true
+          "should_succeed": true,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "20",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": true
+          "should_succeed": true,
+          "should_succeed_complete": true
         },
         {
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "30",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": true
+          "should_succeed": true,
+          "should_succeed_complete": true
         }
       ],
       "attestations": []
@@ -69,7 +72,8 @@
           "pubkey": "0xa99a76ed7796f7be22d5b7e85deeb7c5677e88e511e0b337618f8c4eb61349b4bf2d153f649f7b53359fe8b94a38e44c",
           "slot": "29",
           "signing_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "should_succeed": false
+          "should_succeed": false,
+          "should_succeed_complete": true
         }
       ],
       "attestations": []
